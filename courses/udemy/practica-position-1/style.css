@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --white: #fff;
+    --blue: #257dc2;
+    --verde: #8fd3f4;
+    --gradiente-1: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    --gradiente-2: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+    /*Variables form*/
+    --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient1: linear-gradient(135deg, #667eea86 0%, #764ba28e 100%);
+    --url-img: url("https://images.unsplash.com/photo-1703016445159-2d933b1196f5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    --box-shadow: 6px 6px 10px rgba(0,0,0,.6);
+    --radius: 8px;
+    --width: 100%;
+
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding: 70px;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+}
+/*--------hero --------*/
+.hero {
+    position: relative;
+    
+    height: 100vh;
+    padding-top: 0.1px;
+    
+    background-image: linear-gradient(180deg, #275dc27a 0%, #1d20b673 100%), url('https://images.unsplash.com/photo-1523978591478-c753949ff840?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-position: center;
+    background-size: cover;
+}
+.nav {
+    position: fixed;
+    top: 0;
+
+    width: 100%;
+    height: 70px;
+    padding: 0 50px;
+
+    background: var(--blue);
+    text-align: right;
+    z-index: 10;
+
+    .enlaces {
+        display: inline-block;
+        padding: 0 20px;   
+       
+        color: var(--white);
+        line-height: 70px;
+        text-decoration: none;
+    }
+    .enlaces:hover {
+        background-color: var(--white);
+        color: var(--blue);
+    }
+}
+.container-text {
+    text-align: center;
+    margin-top: clamp(150px, 35vw, 270px);
+    color: var(--white);
+    text-wrap: pretty;
+
+    .hero__title {
+        font-size: 4rem;
+    }
+
+    .hero__copy {
+        font-size: 2rem;
+        font-weight: 300;
+        margin: 20px 0;  
+    }
+
+    .hero__cta {
+       display: inline-block;
+       padding: 15px 25px;
+       color: var(--blue);
+       background: var(--white);
+       border-radius: 5px;
+       font-weight: bold;
+       text-decoration: none; 
+    }
+
+    .hero__cta:hover {
+        background: var(--blue);
+        color: var(--white);
+    }
+}
+.hero__wave {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: var(--verde);
+}
+/*--------Main --------*/
+.section {
+    height: 100vh;
+    background-attachment: fixed;
+    
+    .title {
+        color: var(--white);
+        font-size: 3rem;
+        text-align: center;
+        line-height: 100vh;
+    }
+}
+.section:nth-of-type(1) {
+    background-color: var(--verde);
+}
+.section:nth-of-type(2) {
+    background-image: var(--gradiente-1);
+}
+/*Contacto*/
+.section:nth-of-type(3) {
+    padding: .1px;
+    background-image: var(--gradient1), var(--url-img);
+    background-size: cover;
+    background-position: center;
+}
+.form {
+    width: 400px;
+    margin: 70px auto;
+    padding: 30px 20px 40px;
+
+    text-align: center;
+    overflow: hidden;
+    border-radius: var(--radius);
+    background-color: #ffffff8c;
+    box-shadow: var(--box-shadow);
+
+    .input {
+        width: var(--width);
+        padding: 20px 15px;
+        display: block;
+        margin-bottom: 20px;
+        font-size: 14px;
+        border: 1px solid #b39b9b;
+        border-radius: 15px;
+        outline: none;
+    }
+    .input, .form__submit {
+        font-family: inherit;
+    }
+    .form__title {
+        margin-bottom: 40px;
+        font-size: 2rem;
+    }
+    .form__message {
+        max-width: var(--width);
+        min-width: var(--width);
+        min-height: 150px;
+        max-height: 150px;    
+    }
+    .form__submit {
+        display: block;
+        width: var(--width);
+        padding: 15px 30px;
+        border: none;
+        border-radius: var(--radius);
+        color: var(--white);
+        font-weight: 700;
+        font-size: 18px;
+        background-image: var(--gradient);
+        cursor: pointer;
+    }
+    .form__submit:hover {
+        background-image: var(--gradient1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}

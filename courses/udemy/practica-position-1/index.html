@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+    <!--Estilos-->
+    <link rel="stylesheet" href="./style.css">
+    <title>Practica Wave</title>
+</head>
+
+<body>
+    <header class="hero">
+        <nav class="nav">
+            <a href="#inicio" class="enlaces">Inicio</a>
+            <a href="#acercaDe" class="enlaces">Acerca de</a>
+            <a href="#contacto" class="enlaces">Contacto</a>
+        </nav>
+        <div class="container-text">
+            <h1 class="hero__title">Aprende CSS desde cero</h1>
+            <p class="hero__copy">Entiende las bases de CSS y dominalo para siempre</p>
+            <a href="" class="hero__cta">Entra ahora</a>
+        </div>
+        <div class="hero__wave" style="height: 150px; overflow: hidden;">
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                <path d="M-21.72,81.42 C157.16,231.42 349.20,-49.98 528.49,143.59 L500.00,150.00 L-17.21,160.38 Z"
+                    style="stroke: none; fill: currentColor;"></path>
+            </svg>
+        </div>
+    </header>
+    <main>
+        <section class="section" id="inicio">
+            <h2 class="title">Inicio</h2>
+        </section>
+
+        <section class="section" id="acercaDe">
+            <h2 class="title">Acerca de</h2>
+        </section>
+
+        <section class="section" id="contacto">
+            <form action="" class="form">
+                <h2 class="form__title">Contactanos</h2>
+                <input type="text" class="form__name input" placeholder="Nombre:">
+                <input type="email" placeholder="tucorreo@ejemplo.com" class="form__email input">
+                <textarea name="" id="" cols="3" rows="5" placeholder="Deja tu mensaje acá..." class="form__message input"></textarea>
+                <input type="submit" value="enviar" class="form__submit">
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
